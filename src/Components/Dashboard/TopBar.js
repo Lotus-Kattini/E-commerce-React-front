@@ -9,6 +9,7 @@ import { Dropdown, DropdownButton } from 'react-bootstrap';
 import Cookie from 'cookie-universal'
 
 function TopBar() {
+  
   const menu=useContext(Menu);
   const setisopen=menu.setisopen;
   const [name,setname]=useState('')

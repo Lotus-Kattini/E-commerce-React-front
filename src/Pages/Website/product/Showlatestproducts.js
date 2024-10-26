@@ -12,8 +12,12 @@ function Showlatestproducts() {
     },[])
     console.log(products)
 
-    const productShow=products.map((product)=><Producthome col='6' title={product.title} description={product.description} img={product.images[0].image} discount={product.discount} price={product.price} rating={product.rating
-    }/>)
+    const productShow=products.map((product)=><Producthome col='6'
+     title={product.title} description={product.description} img={product.images[0].image} 
+     discount={product.discount} price={product.price} rating={product.rating
+    }
+    id={product.id}
+    />)
 
   return (
     <div className="col-md-6 col-12">

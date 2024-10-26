@@ -3,6 +3,7 @@ import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import Stringslice from "../../../helpers/Stringslice";
+import { NavLink } from "react-bootstrap";
 
 function Toprated(props) {
     console.log(props)
@@ -12,7 +13,7 @@ function Toprated(props) {
     const emptystars=Array.from({length:5-stars}).map((index)=><FaRegStar key={index}/>)
 
   return (
-            <div className="">
+            <NavLink to={`/product/${props.id}`} className="">
                 <div className="m-1 border-bottom w-100 p-3 h-100 d-flex justify-content-between">
                         <div className="w-50"
                                 style={{backgroundImage:`url(${props.img})`,
@@ -46,7 +47,7 @@ function Toprated(props) {
                     </div>
                     </div>
                 </div>
-            </div>
+            </NavLink>
   )
 }
 

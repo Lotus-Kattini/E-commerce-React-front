@@ -21,6 +21,7 @@ import Updateproduct from './Pages/Dashboard/Updateproduct';
 import Hoooome from './Pages/Website/Hoooome';
 import CategoriesHome from './Pages/Website/CategoriesHome';
 import Website from './Pages/Website/Website';
+import SingleProduct from './Pages/Website/SingleProduct/SingleProduct';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         {/* PUBLIC ROUTES */}
           <Route path='/' element={<Hoooome/>}/>
           <Route path='/categories' element={<CategoriesHome/>}/>
+          <Route path='/product/:id' element={<SingleProduct/>}/>
         </Route>
         <Route element={<Requireback/>}>
           <Route path='/login' element={<Login/>}/>

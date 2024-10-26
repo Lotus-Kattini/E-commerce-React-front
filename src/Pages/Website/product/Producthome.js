@@ -3,6 +3,7 @@ import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import Stringslice from "../../../helpers/Stringslice";
+import { NavLink } from "react-bootstrap";
 
 function Producthome(props) {
     console.log(props)
@@ -12,7 +13,7 @@ function Producthome(props) {
     const emptystars=Array.from({length:5-stars}).map((index)=><FaRegStar key={index}/>)
 
   return (
-            <div className={`col-lg-${props.col} col-md-6 col-12`}>
+            <NavLink to={`/product/${props.id}`} className={`col-lg-${props.col} col-md-6 col-12`}>
                 <div className="rounded m-1 border p-3 h-100 d-flex flex-column justify-content-between" style={{backgroundColor:'#fff'}}>
                     <div>
                         <p style={{color:'gray'}} className="text-truncate">{Stringslice(props.title,20)}</p>
@@ -50,7 +51,7 @@ function Producthome(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </NavLink>
   )
 }
 

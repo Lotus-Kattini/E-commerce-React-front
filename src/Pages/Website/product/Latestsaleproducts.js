@@ -14,7 +14,7 @@ function Latestsaleproducts() {
     },[])
     console.log(products)
 
-    const productShow=products.map((product)=><Producthome col='3' title={product.title} description={product.description} img={product.images[0].image} discount={product.discount} price={product.price} rating={product.rating
+    const productShow=products.map((product)=><Producthome col='3' id={product.id} title={product.title} description={product.description} img={product.images[0].image} discount={product.discount} price={product.price} rating={product.rating
     }/>)
 
   return (

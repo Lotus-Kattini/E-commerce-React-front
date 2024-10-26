@@ -10,6 +10,7 @@ import {Links} from './Links'
 
 function SideBar() {
   const menu=useContext(Menu);
+  
   const isopen=menu.isopen;
 
   const windowSizeee=useContext(WindowSize);
